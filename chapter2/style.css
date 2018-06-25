@@ -1,0 +1,44 @@
+/*:root {*/
+    /*font-size: 0.75em; !* Sets the default font size to something below the initial 16px font size. If we wanted 14px, then we would do 0.875 since (14/16) = .875 *!*/
+/*}*/
+:root {
+    font-size: calc(0.5em + 1vw);
+}
+
+.panel {
+
+    font-size: 1rem;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #999;
+}
+
+.panel > h2 {
+    margin-top: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.panel.large {
+    font-size: 1.2rem;
+}
+
+.square {
+    width: 90vmin;
+    height: 90vmin;
+    background-color: #369;
+}
+
+/*@media (min-width: 800px) {*/
+    /*:root {*/
+        /*font-size: 0.875em;*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 1600px) {*/
+    /*:root {*/
+        /*font-size: 1.2em;*/
+    /*}*/
+/*}*/
+
