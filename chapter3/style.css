@@ -1,0 +1,107 @@
+/* The * selector targets all elements in a document. The selectors target the pseudo elements as well */
+/**, ::after, ::before {*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+/* This helps when using third party css libraries which may not have border-box sizing set */
+:root {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+/* Then something like below will make sure your third party library starts at content box if needed */
+/*.whatever-your-third-party-component-is {*/
+    /*box-sizing: content-box;*/
+/*}*/
+
+body, * + * {
+    margin-top: 1.5em;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #eee;
+}
+
+header {
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+    padding: 1em 1.5em;
+}
+
+main {
+    display: block;
+}
+
+.button-link {
+    display: block; /* fills the container and makes each appear on a new line */
+    padding: 0.5em;
+    color: #fff;
+    background-color: #0090C9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*.button-link + .button-link {*/
+    /*!* only adds this when the element is right after the other *!*/
+    /* No longer needed when using the lobotomized owl selector */
+    /*margin-top: 1.5em;*/
+/*}*/
+
+.container {
+    /*Old when trying to get equal column height instead of using flex*/
+    /*display: table; */
+    /*width: 100%;*/
+    /*border-spacing: 1.5em 0;*/
+
+    display: flex;
+}
+
+.main {
+    /*float: left; take out the float prop when using the table display*/
+
+    /*display: table-cell; take out when no longer using display: table for equal height columns*/
+
+
+    background-color: #fff;
+    border-radius: .5em;
+    padding: 1em 1.5em;
+    width: 70%;
+}
+
+.sidebar {
+    /*float: right; take out the float prop when using the table display*/
+
+    /* adding a "gutter" between the elements. Taken out when using table display for equal columns*/
+    /*width: calc(30% - 1.5em);*/
+
+    background-color: #fff;
+    border-radius: .5em;
+    display: table-cell;
+    padding: 1.5em;
+    margin-left: 1.5em;
+    margin-top: 0; /*due to the lobotomized owl selector */
+    width: 30%;
+}
+
+.sponsor-link {
+    display: block;
+    color: #0072b0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/** below was a way to still have the gutter between elements when using the display: table solution. You won't
+see it in the index.html anymore, but this necessitated a "wrapper" div around the container
+ */
+/*.wrapper {*/
+    /*margin-left: -1.5em;*/
+    /*margin-right: -1.5em;*/
+/*}*/
+
+
