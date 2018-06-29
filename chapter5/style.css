@@ -1,0 +1,134 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #709b90;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body * + * {
+    margin-top: 1.5em;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.site-nav {
+    display: flex;
+    list-style-type: none;
+    background-color: #5f4b44;
+    padding: .5em;
+}
+
+.site-nav > li {
+    margin-top: 0;
+}
+
+.site-nav > li + li {
+    margin-left: 1.5em;
+}
+
+.site-nav > .nav-right {
+    margin-left: auto;
+}
+
+.site-nav > li > a {
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5em 1em;
+}
+
+.tile {
+    padding: 1.5em;
+    background: #fff;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.column-main {
+    flex: 2;
+}
+
+.column-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-sidebar > .tile {
+    flex: 1;
+}
+
+.login-form h3 {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.login-form input:not([type=checkbox]):not([type=radio]) {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+
+.login-form button {
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: .5em 1em;
+    cursor: pointer;
+}
+
+.centered {
+    text-align: center;
+}
+
+.cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .7;
+}
+
+.cost > span {
+    margin-top: 0;
+}
+
+.cost-currency {
+    font-size: 2rem;
+}
+.cost-dollars {
+    font-size: 4rem;
+}
+.cost-cents {
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+
+.cta-button {
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: .5em 1em;
+    text-decoration: none;
+}
