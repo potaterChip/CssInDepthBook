@@ -1,0 +1,13 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: .5em;
+}
+
+.grid > * {
+    padding: 2em;
+    color: white;
+    background-color: darkgrey;
+    border-radius: .5em;
+}
