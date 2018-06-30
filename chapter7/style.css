@@ -133,7 +133,7 @@ button {
 }
 
 .submenu > li + li {
-    border-top: 1px solid #999;
+    border-top: thin solid #999;
 }
 
 .submenu > li > a {
