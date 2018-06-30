@@ -1,0 +1,78 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="top-banner">
+    <div class="top-banner-inner">
+        <p>Find out what's going on at Wombat Coffee each
+            month. Sign up for our newsletter:
+            <button id="open">Sign up</button>
+        </p>
+    </div>
+</header>
+<div class="modal" id="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-body">
+        <button class="modal-close" id="close">close</button>
+        <h2>Wombat Newsletter</h2>
+        <p>Sign up for our monthly newsletter. No spam.
+            We promise!</p>
+        <form>
+            <p>
+                <label for="email">Email address:</label>
+                <input type="text" id="email"/>
+            </p>
+            <p><button type="submit">Submit</button></p>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <main class="col-main">
+        <nav>
+            <div class="dropdown">
+                <div class="dropdown-label">Main Menu</div>
+                <div class="dropdown-menu">
+                    <ul class="submenu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/coffees">Coffees</a></li>
+                        <li><a href="/brewers">Brewers</a></li>
+                        <li><a href="/specials">Specials</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1>Wombat Coffee Roasters</h1>
+    </main>
+
+    <aside class="col-sidebar">
+        <div class="affix">
+            <ul class="submenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/coffees">Coffees</a></li>
+                <li><a href="/brewers">Brewers</a></li>
+                <li><a href="/specials">Specials</a></li>
+                <li><a href="/about">About us</a></li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+<script type="text/javascript">
+    var button = document.getElementById('open');
+    var close = document.getElementById('close');
+    var modal = document.getElementById('modal');
+
+    button.addEventListener('click', function (event) {
+        event.preventDefault();
+        modal.style.display = 'block';
+    });
+
+    close.addEventListener('click', function (event) {
+        event.preventDefault();
+        modal.style.display = 'none';
+    });
+</script>
+</body>
+</html>
